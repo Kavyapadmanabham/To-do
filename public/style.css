@@ -1,0 +1,223 @@
+/* Reset and Basic Styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #f0f0f0, #d9e4f5);
+    color: #333;
+    transition: background 0.3s, color 0.3s;
+    padding: 20px;
+}
+
+/* Container */
+.container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 420px;
+    text-align: center;
+    backdrop-filter: blur(5px);
+}
+
+/* Title with Icon */
+h1 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+h1 img {
+    width: 30px;
+    margin-left: 10px;
+}
+
+/* Input and Button */
+.input-container {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 25px; /* Increased space between input and task list */
+}
+
+input {
+    flex: 1;
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+input:focus {
+    border-color: #4A90E2;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    background: #4A90E2;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #357ABD;
+}
+
+/* Task List */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.8);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    transition: 0.3s;
+}
+
+/* Task Container */
+.task-container {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+/* Task Text */
+.task-text {
+    flex: 1;
+    font-size: 16px;
+    text-align: left;
+}
+
+/* Timestamp and Delete Button */
+.timestamp {
+    font-size: 12px;
+    color: #777;
+    flex-shrink: 0;
+    margin-left: 15px; /* Space between task text and timestamp */
+    margin-right: 10px; /* Space between timestamp and delete button */
+}
+
+/* Completed Task */
+.completed {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* Checkbox */
+input[type="checkbox"] {
+    transform: scale(1.2);
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+/* Delete Button */
+.delete-btn {
+    background: #E74C3C;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    cursor: pointer;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.delete-btn:hover {
+    background: #C0392B;
+}
+
+/* Dark Mode */
+.dark-mode {
+    background: linear-gradient(135deg, #222, #444);
+    color: #f5f5f5;
+}
+
+.dark-mode .container {
+    background: rgba(40, 40, 40, 0.9);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+}
+
+.dark-mode li {
+    background: rgba(50, 50, 50, 0.9);
+}
+
+.dark-mode li:hover {
+    background: rgba(60, 60, 60, 1);
+}
+
+.dark-mode input {
+    background: #333;
+    color: white;
+    border: 2px solid #555;
+}
+
+.dark-mode button {
+    background: #1E88E5;
+}
+
+.dark-mode button:hover {
+    background: #1565C0;
+}
+
+.dark-mode .delete-btn {
+    background: #E53935;
+}
+
+.dark-mode .delete-btn:hover {
+    background: #C62828;
+}
+
+.dark-mode .timestamp {
+    color: #bbb;
+}
+
+/* Dark Mode Toggle Button */
+#darkModeToggle {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 10px;
+    background-color: #222;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#darkModeToggle:hover {
+    background: #444;
+}
+#taskInput {
+    margin-bottom: 15px; /* Adds space below the input field */
+}
+
+button {
+    margin-bottom: 20px; /* Adds space below the button */
+}
+
+#taskList {
+    margin-top: 10px; /* Ensures list has some top space */
+}
